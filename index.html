@@ -1,444 +1,526 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>YouTube.com Clone</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/video.css">
-    <link rel="stylesheet" href="styles/sidebar.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/mediaqueries.css" />
   </head>
   <body>
-   
-    
-    <div class="header">
-      <div class="left-section">
-        <img class="hamburger-menu" src="icons/hamburger-menu.svg">
-        <img class="youtube-logo" src="icons/youtube-logo.svg">
+    <nav id="desktop-nav">
+      <div class="logo">John Doe</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#about">Education</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-
-      <div class="middle-section">
-        <input class="search-bar" type="text" placeholder="Search">
-        <button class="search-button">
-          <img class="search-icon" src="icons/search.svg">
-          <div class="tooltip">Search</div>
-        </button>
-        <button class="voice-search-button">
-          <img class="voice-search-icon" src="icons/voice-search-icon.svg">
-          <div class="tooltip">Search with your voice</div>
-        </button>
-      </div>
-
-      <div class="right-section">
-        <div class="upload-icon-container">
-          <img class="upload-icon" src="icons/upload.svg">
-          <div class="tooltip">Create</div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Ashay Saoji</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-
-        <div class="youtube-apps-icon-container">
-          <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
-          <div class="tooltip">Youtube Apps</div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#about" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
-        
-        <div class="notifications-icon-container">
-          <img class="notifications-icon" src="icons/notifications.svg">
-          <div class="notifications-count">3</div>
-          <div class="tooltip">Notifications</div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/Ashay pic.jpeg" alt="Ashay Saoji profile picture" id="profile-pic" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Ashay Saoji</h1>
+        <p class="section__text__p2">Software Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
         </div>
-        <img class="current-user-picture" src="channel-pictures/my-channel.jpeg">
-      </div>
-    </div>
-
-    <div class="sidebar">
-      <div class="sidebar-link">
-        <img class="" src="icons/home.svg">
-        <div>Home</div>
-      </div>
-      <div class="sidebar-link">
-        <img class="" src="icons/explore.svg">
-        <div>explore</div>
-      </div>
-      <div class="sidebar-link">
-        <img class="" src="icons/subscriptions.svg">
-        <div>Subscriptions</div>
-      </div>
-      <div class="sidebar-link">
-        <img class="" src="icons/originals.svg">
-        <div>Originals</div>
-      </div>
-      <div class="sidebar-link">     
-        <img class="" src="icons/youtube-music.svg">
-        <div>Youtube Music</div>
-      </div>
-      <div class="sidebar-link">
-        <img class="" src="icons/library.svg">
-        <div>Library</div>
-      </div>
-    </div>
-  
-
-    <div class="video-grid">
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-          <div class="video-time">14:20</div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="window.open('https://linkedin.com/in/ashay-saoji')"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github Profile"
+            class="icon"
+            onclick="window.open('https://github.com/ashayssaoji')"
+          />
         </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/Ashay pic.jpeg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>1+ years <br />Software Engineer - Capgemini, Pune, India</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.E. in Information Technology - YCCE, Nagpur, India<br />M.Sc. in Computer Software Engineering - Northeastern University, Boston, Massachusetts</p>
+            </div>
           </div>
-          <div class="video-info">
-            <p class="video-title">
-              Talking Tech and AI with Google CEO Sundar Pichai!
-            </p>
-            <p class="video-author">
-              Marques Brownlee
-            </p>
-            <p class="video-stats">
-              3.4M views &#183; 6 months ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-          <div class="video-time">8:22</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-2.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Try Not To Laugh Challenge #9
-            </p>
-            <p class="video-author">
-              Markiplier
-            </p>
-            <p class="video-stats">
-              19M views &#183; 4 years ago
+          <div class="text-container">
+            <p>
+              Currently pursuing a Master's in Computer Software Engineering at
+              Northeastern University. As a Software Engineer, I bring
+              experience from Capgemini, focusing on Java for full-stack web
+              development. My skills include improving applications, issue
+              resolution, and client engagement. Proficient in web development
+              tools, I've contributed to independent and team-based projects.
+              Seeking opportunities in software engineering to apply and expand
+              my practical expertise
             </p>
           </div>
         </div>
       </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-          <div class="video-time">9:13</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Very-Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>ReactJS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
           </div>
-          <div class="video-info">
-            <p class="video-title">
-              Crazy Tik Toks Taken Moments Before DISASTER
-            </p>
-            <p class="video-author">
-              SSSniperWolf
-            </p>
-            <p class="video-stats">
-              12M views &#183; 1 year ago
-            </p>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Software Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JAVA</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Data-Structure and Algorithms</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JAVA EE</h3>
+                  <p>Very Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Object Oriented Programming</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>mySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Tools</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>VS Code</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Github</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Balsamiq Wireframes</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Moqups</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>IntelliJ</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Netbeans</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Soft-Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Adaptability</h3>
+                 
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Social Skills</h3>
+                
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Listening</h3>
+                  
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Grasping</h3>
+                  
+                </div>
+              </article>
+             
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-          <div class="video-time">11:17</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-2.jpeg">
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
           </div>
-          <div class="video-info">
-            <p class="video-title">
-              The Simplest Math Problem No One Can Solve - Collatz Conjecture
-            </p>
-            <p class="video-author">
-              Veritasium
-            </p>
-            <p class="video-stats">
-              18M views &#183; 4 months ago
-            </p>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-          <div class="video-time">19:59</div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:ashayssaoji@gmail.com">ashayssaoji@gmail.com</a></p>
+          ,
+          <p><a href="mailto:saoji.a@northeastern.edu">saoji.a@northeastern.edu</a></p>
         </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Kadane's Algorithm to Maximum Sum Subarray Problem
-            </p>
-            <p class="video-author">
-              CS Dojo
-            </p>
-            <p class="video-stats">
-              519K views &#183; 5 years ago
-            </p>
-          </div>
+        <div class="contact-info-container"> 
+          <div id="vertical-line"></div>
         </div>
+        <div class="contact-info-container">
+          <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn Profile"
+              class="icon Linked icon"
+              onclick="window.open('https://linkedin.com/in/ashay-saoji')"
+            />
+          <p><a href="https://linkedin.com/in/ashay-saoji">www.linkedin.com/in/ashay-saoji</a></p>    
+          </div>
       </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-          <div class="video-time">10:13</div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#about">Education</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-2.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Anything You Can Fit In The Circle I’ll Pay For
-            </p>
-            <p class="video-author">
-              MrBeast
-            </p>
-            <p class="video-stats">
-              141M views &#183; 1 year ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+      </nav>
+      <p>Copyright &#169; 2024 Ashay Saoji. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
-<!-- spaceeeee
-
- <!DOCTYPE html>
- <html>
-   <head>
-     <title>
-       Youtube.com Clone
-     </title>
- 
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
- 
-     <style>
-       p{
-         font-family: Roboto, Arial;
-         margin-top: 0;
-         margin-bottom: 0;
-       }
-       .thumbnail{
-         width: 100%;
-       }
- 
-       .search-bar{
-         display: block;
-       }
-      
-       .video-title{
-         margin-top: 0;
-         font-size: 14px;
-         font-weight: 500;
-         line-height: 20px;
-         margin-bottom: 12px;
-       }
-       
-       .video-info-grid{
-         display: grid;
-         grid-template-columns: 50px 1fr;
-       }
- 
-       .profile-picture{
-         width: 40px;
-         border-radius: 50px;
-       }
- 
-       .thumbnail-row{
-         margin-bottom: 12px;
-       }
-       .video-author, 
-       .video-stats {
-         color: gray(96, 96, 96);
-         font-size: 12px;
-       }
- 
-       .video-author{
-         margin-bottom: 4px;
-       }
- 
-       .vide-grid{
-         display: grid;
-         grid-template-columns: 1fr 1fr 1fr;
-         column-gap: 16px;
-         row-gap: 40px;
-       }
- 
- 
-     </style>
-   </head>
-   <body>
- 
-     <input type="text" class="search-bar" placeholder="Search">
- 
-     <div class="video-grid">
-       <div class="video-preview">
-         <div class="thumbnail-row">
-           <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-         </div>
-         <div class="video-info-grid">
-           <div class="channel-picture">
-             <img class="profile-picture" src="Channel Images/channel-1.jpeg">
-           </div>
-           <div class="video-info">
-             <p class="video-title">
-               Talking Tech and AI with Google CEO Sundar Pichai!
-               </p>
-           
-               <p class="video-author">
-                 Marques Brownlee
-               </p>
-                
-               <p class="video-stats">
-                 3.4M views &#183 6 months ago
-               </p>
-           </div>
-         </div>
-         </div>
-       
-   
-       <div class="video-preview">
-         <div class="thumbnail-row">
-           <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-         </div>
-         <div class="video-info-grid">
-           <div class="channel-picture">
-             <img class="profile-picture" src="Channel Images/channel-2.jpeg">
-           </div>
-           <div class="video-info">
-             <p class="video-title">
-               Try Not To Laugh Challenge #9
-               </p>
-           
-               <p class="video-author">
-                 Markiplier
-               </p>
-                
-               <p class="video-stats">
-                 19M views &#183 4 years ago
-               </p>
-           </div>
-         </div>
-       </div>
-     
-       <div class="video-preview">
-         <div class="thumbnail-row">
-           <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-         </div>
-         <div class="video-info-grid">
-           <div class="channel-picture">
-             <img class="profile-picture" src="Channel Images/channel-1.jpeg">
-           </div>
-           <div class="video-info">
-             <p class="video-title">
-               Talking Tech and AI with Google CEO Sundar Pichai!
-               </p>
-           
-               <p class="video-author">
-                 Marques Brownlee
-               </p>
-                
-               <p class="video-stats">
-                 3.4M views &#183 6 months ago
-               </p>
-           </div>
-         </div>
-       </div>
-   
-       <div class="video-preview">
-         <div class="thumbnail-row">
-           <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-         </div>
-         <div class="video-info-grid">
-           <div class="channel-picture">
-             <img class="profile-picture" src="Channel Images/channel-2.jpeg">
-           </div>
-           
-           <div class="video-info">
-             <p class="video-title">
-               Try Not To Laugh Challenge #9
-               </p>
-           
-               <p class="video-author">
-                 Markiplier
-               </p>
-                
-               <p class="video-stats">
-                 19M views &#183 4 years ago
-               </p>
-           </div>
-         </div>
-       </div>
-      
-       <div class="video-preview">
-         <div class="thumbnail-row">
-           <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-         </div>
-         <div class="video-info-grid">
-           <div class="channel-picture">
-             <img class="profile-picture" src="Channel Images/channel-1.jpeg">
-           </div>
-           
-           <div class="video-info">
-             <p class="video-title">
-               Talking Tech and AI with Google CEO Sundar Pichai!
-               </p>
-           
-               <p class="video-author">
-                 Marques Brownlee
-               </p>
-                
-               <p class="video-stats">
-                 3.4M views &#183 6 months ago
-               </p>
-           </div>
-         </div>
-       </div>
-   
-       <div class="video-preview">
-         <div class="thumbnail-row">
-           <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-         </div>
-         <div class="video-info-grid">
-           <div class="channel-picture">
-             <img class="profile-picture" src="Channel Images/channel-2.jpeg">
-           </div>
-           <div class="video-info">
-             <p class="video-title">
-               Try Not To Laugh Challenge #9
-               </p>
-               <p class="video-author">
-                 Markiplier
-               </p>
-               <p class="video-stats">
-                 19M views &#183 4 years ago
-               </p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </body>
- </html> -->
