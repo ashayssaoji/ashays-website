@@ -367,6 +367,12 @@ article .icon {
   height: 70vh;
 }
 
+#vertical-line{
+  width: 1px;
+  background-color: grey;
+  height: 2rem;
+}
+
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
