@@ -258,6 +258,8 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
+  flex-wrap: wrap;
+
 }
 
 .about-pic {
@@ -334,6 +336,7 @@ article .icon {
 
 #projects {
   position: relative;
+  /* margin-top: 10rem; */
 }
 
 .color-container {
@@ -343,8 +346,8 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 50%;
+  height: 10%;
 }
 
 
@@ -364,7 +367,8 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  margin-top: 10rem;
+
 }
 
 #vertical-line{
@@ -409,6 +413,10 @@ article .icon {
 footer {
   height: 26vh;
   margin: 0 1rem;
+}
+
+footer nav{
+  margin-top: -10rem;
 }
 
 footer p {
